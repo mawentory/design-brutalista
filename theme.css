@@ -1,0 +1,108 @@
+/*
+ * Brutalist — Acid yellow and thick borders.
+ *
+ * The complete token set. Every rule in design.css reads from these names,
+ * so this file is the whole visual identity: change a value here and the
+ * entire gallery follows.
+ *
+ * The second block below holds derived accessibility values. Each one is
+ * the designer's colour pushed toward the opposite end of the ramp until it
+ * clears its WCAG minimum against every surface it can land on -- page,
+ * sheet, and the tinted fills of badges and diff lines. They are generated
+ * and checked, not hand-picked; see build/verify.py in the design tooling.
+ */
+
+[data-theme="brutalista"] {
+  --paper: #e8ff59;
+  --paper-2: #d6f22f;
+  --sheet: #ffffff;
+  --ink: #0a0a0a;
+  --ink-2: #2e2e2e;
+  --ink-3: #5a5a5a;
+  --rule: #0a0a0a;
+  --signal: #ff2d6f;
+  --signal-soft: #ffc2d6;
+  --signal-hover: #ff0f58;
+  --ink-hover: #000000;
+  --add: #0a7d3c;
+  --del: #d81e1e;
+  --board: #0a0a0a;
+  --board-deep: #000000;
+  --board-2: #1c1c1c;
+  --board-rule: #3a3a3a;
+  --board-text: #e8ff59;
+  --board-dim: #9a9a9a;
+  --ok-board: #6fd39b;
+  --err-board: #ff8f8f;
+  --code-str: #ffd479;
+  --code-add-bg: color-mix(in srgb, #3fbf7f 20%, transparent);
+  --code-add-fg: #7fe8b0;
+  --code-del-bg: color-mix(in srgb, #e05a5a 18%, transparent);
+  --code-del-fg: #ff9c9c;
+  --code-del-text: #c9a3a3;
+  --line-openai: #0057ff;
+  --line-anthropic: #ff2d6f;
+  --line-google: #00a86b;
+  --line-mistral: #7a00ff;
+  --line-deepseek: #ff7a00;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --display: "Archivo Black", "Inter", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.01em;
+  --display-tracking-lg: -0.015em;
+  --display-tracking-tight: -0.02em;
+  --display-transform: uppercase;
+  --btn-weight: 800;
+  --btn-tracking: 0.02em;
+  --btn-transform: uppercase;
+  --r-sm: 0;
+  --r-md: 0;
+  --r-lg: 0;
+  --r-pill: 0;
+  --bw: 4px;
+  --rule-w: 3px;
+  --bw-heavy: 6px;
+  --rule-style: solid;
+  --shadow-card: 10px 10px 0 var(--ink);
+  --shadow-btn: 4px 4px 0 var(--ink);
+  --shadow-btn-hover: 2px 2px 0 var(--ink);
+  --shadow-panel: none;
+  --btn-hover-transform: translate(2px, 2px);
+  --panel-blur: none;
+  --section-y: clamp(64px, 9vw, 112px);
+  --size-base: 1.0625rem;
+  --texture: none;
+  --texture-size: auto;
+  --texture-position: 0 0;
+  --texture-repeat: repeat;
+  --texture-attachment: scroll;
+  --accent-2: #0057ff;
+  --accent-3: #ff7a00;
+
+  /* Derived for contrast; see the note above. */
+  --add-text: #0a7b3b;
+  --board-add-text: #7fe8b0;
+  --board-code-text: #ffd479;
+  --board-del-text: #c9a3a3;
+  --board-dim-text: #9a9a9a;
+  --board-key-text: #ffd479;
+  --del-text: #ce1d1d;
+  --focus-ring: #ff2d6f;
+  --ink-3-text: #5a5a5a;
+  --on-ink-muted: #9a9a9a;
+  --on-signal: #0a0a0a;
+  --signal-soft-text: #0a0a0a;
+  --signal-text: #cb2459;
+
+  color-scheme: light;
+}
+
+/* ---------- Identity rules that are not tokens ---------- */
+[data-theme="brutalista"] .switch-knob,
+[data-theme="brutalista"] .choice-dot {
+  border-radius: 0;
+}
+[data-theme="brutalista"] .topbar {
+  border-bottom: 8px solid var(--ink);
+}
